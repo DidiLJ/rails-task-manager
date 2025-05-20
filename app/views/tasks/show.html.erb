@@ -1,0 +1,25 @@
+<div class="container py-5 h-100">
+   <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h1 class="mb-3">My task</h1>
+            <h3><%= @task.title %> </h3>
+            <h3><%= @task.details %> </h3>
+            <br>
+            <%= link_to "Edit a task", edit_task_path %>
+            <br>
+            <%= link_to "Delete",
+            task_path(@task),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+            <br>
+            <%= link_to "Back to list", root_path %>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
