@@ -3,6 +3,10 @@
 
   <%= form_with class: "mb-4", model: task do |f| %>
     <div class="mb-3">
+      <%= f.check_box :completed %>
+      <%= f.label :completed, "Completed" %>
+    </div>
+    <div class="mb-3">
       <%= f.label :title, class: "form-label" %>
       <%= f.text_field :title, class: "form-control" %>
     </div>

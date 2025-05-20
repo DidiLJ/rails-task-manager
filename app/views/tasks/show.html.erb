@@ -6,7 +6,8 @@
         <div class="card" style="border-radius: 15px;">
           <div class="card-body p-5">
             <h1 class="mb-3">My task</h1>
-            <h3><%= @task.title %> </h3>
+            <%= check_box_tag(:task, "1", @task.completed) %>
+            <%= label_tag(:task, @task.title) %>
             <h3><%= @task.details %> </h3>
             <br>
             <%= link_to "Edit a task", edit_task_path %>
